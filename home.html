@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css">
+   <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>iPhone 17 Pro.</h1>
+    <ul>
+      <li><a href="home.html"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i></a></li>
+    <div class="user-menu">
+    <i class="fa-solid fa-user" id="userIcon"></i>
+
+    <!-- Popup info user -->
+    <div class="user-info" id="userInfo">
+      <p><strong>Username:</strong> <span id="displayUsername">Guest</span></p>
+      <p><strong>Nama Lengkap:</strong> <span id="nama">NNama</span></p>
+      <p><strong>Tanggal Lahir:</strong> <span id="tanggalLahir">ttl</span></p>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+</div>
+    </ul>
+  </nav>
+
+    <!--banner-->
+  <section class="hero">
+    <div class="banner">
+    <img id="bannerImage" src="hero_endframe__xdzisdq1ppem_large.jpg" alt="Banner Image">
+    </div>
+    </section>
+    <!--banner-->
+
+    <section class="produk-container">
+      <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 1">
+        <h3>Produk 1</h3>
+        <p>Rp 1.400.000</p>
+        <button>Masukkan keranjang</button>
+      </div>
+
+      <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 2">
+        <h3>Produk 2</h3>
+        <p>Rp 2.500.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+      <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 3">
+        <h3>Produk 3</h3>
+        <p>Rp 3.200.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+      <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 4">
+        <h3>Produk 4</h3>
+        <p>Rp 4.750.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 5">
+        <h3>Produk 5</h3>
+        <p>Rp 5.800.000</p>
+        <button>Masukkan Keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 6">
+        <h3>Produk 6</h3>
+        <p>Rp 6.400.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 7">
+        <h3>Produk 7</h3>
+        <p>Rp 7.900.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 8">
+        <h3>Produk 8</h3>
+        <p>Rp 8.300.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 9">
+        <h3>Produk 9</h3>
+        <p>Rp 9.100.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 10">
+        <h3>Produk 10</h3>
+        <p>Rp 10.500.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 11">
+        <h3>Produk 11</h3>
+        <p>Rp 11.200.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+        <div class="produk-card">
+        <img src="0788-APPMFYM4ID-A-1.webp" alt="Produk 12">
+        <h3>Produk 12</h3>
+        <p>Rp 12.750.000</p>
+        <button>Masukkan keranjang</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; iPhone 17 Pro.</p>
+    </footer>
+
+
+</body>
+
+<!--untuk user-->
+
+<script>
+    const images = ["hero_endframe__xdzisdq1ppem_large.jpg", "pro_camera_system_v02_statics_endframe__hwtzkm6umyaa_large.jpg", "battery__fc7m9oxxh7yy_large.jpg"];
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      document.getElementById("bannerImage").src = images[index];
+    }, 3000); // ganti gambar tiap 3 detik
+  </script>
+
+<script>
+  const userIcon = document.getElementById('userIcon');
+  const userInfo = document.getElementById('userInfo');
+
+  userIcon.addEventListener('click', () => {
+    userInfo.style.display = userInfo.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!userInfo.contains(e.target) && e.target !== userIcon) {
+      userInfo.style.display = 'none';
+    }
+  });
+
+  // simpan data user dari registrasi
+  const username = localStorage.getItem('registeredUsername') || 'Guest';
+  document.getElementById('displayUsername').textContent = username;
+  const nama = localStorage.getItem('nama') || 'NNama';
+  document.getElementById('nama').textContent = nama;
+  const tanggalLahir = localStorage.getItem('tanggalLahir') || 'ttl';
+  document.getElementById('tanggalLahir').textContent = tanggalLahir;
+
+  // getoutttt!!!
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    alert('Kamu telah logout!');
+    localStorage.removeItem('registeredUsername');
+    window.location.href = 'index.html';
+  });
+</script>
+
+</html>

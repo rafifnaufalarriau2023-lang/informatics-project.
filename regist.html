@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <link rel="stylesheet" href="registstyle.css">
+</head>
+<body>
+    <div class="regist-container">
+        <form class="regist-box" id="registForm" >
+            <h2>Registrasi Akun</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="nama" placeholder="Nama Lengkap" required>
+            <label for="tanggalLahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+            <button type="submit" class="btn">Daftar</button>
+
+</form>
+
+<script>
+    const form = document.getElementById('registForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const nama = document.getElementById('nama').value;
+        const tanggalLahir = document.getElementById('tanggalLahir').value;
+
+
+        localStorage.setItem('registeredUsername', username);
+        localStorage.setItem('registeredPassword', password);
+        localStorage.setItem('nama', nama);
+        localStorage.setItem('tanggalLahir', tanggalLahir);
+
+        alert('Registrasi berhasil! Silakan login.');
+        window.location.href = 'index.html';
+    });
+</script>
+</body>
+</html>
